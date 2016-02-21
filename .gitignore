@@ -3,6 +3,9 @@ macros.log
 main.log
 main.out
 main.pdf
+main.lof
+main.lot
+main.toc
 thesisECS.log
 *~
 *.aux
