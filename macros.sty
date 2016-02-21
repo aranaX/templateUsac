@@ -142,12 +142,13 @@ GUATEMALA, {\MakeTextUppercase{#6}}
 \newpage
 }
 
-\newcommand{\examenPrivado}[5]{%
+\newcommand{\examenPrivado}[6]{%
 \pdfbookmark[1]{NÓMINA DEL CONSEJO DIRECTIVO}{ndj}
 \thispagestyle{empty}
 
 \begin{center}
-UNIVERSIDAD DE SAN CARLOS DE GUATEMALA\\[6pt] ESCUELA DE CIENCIAS FÍSICAS Y MATEMÁTICAS
+UNIVERSIDAD DE SAN CARLOS DE GUATEMALA\\[6pt]
+\uppercase{{#1}}
 \end{center}
 
 \begin{figure}[h]
@@ -163,13 +164,13 @@ UNIVERSIDAD DE SAN CARLOS DE GUATEMALA\\[6pt] ESCUELA DE CIENCIAS FÍSICAS Y MAT
 {\doublespacing
 \begin{tabbing}
   SECRETARIO ACADÉMICOxs \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  \kill
-  DIRECTOR \> #1 \\
+  DIRECTOR \> {#2} \\
 %  VOCAL I \>  vocal-1\\
 %  VOCAL II \> vocal-2 \\
 %  VOCAL III \> vocal-3 \\
 %  VOCAL IV \> vocal-4 \\
 %  VOCAL V \> vocal-5 \\
-  SECRETARIO ACADÉMICO \> #2
+  SECRETARIO ACADÉMICO \> {#3}
 \end{tabbing}
 
 \vspace{24pt}
@@ -181,9 +182,9 @@ UNIVERSIDAD DE SAN CARLOS DE GUATEMALA\\[6pt] ESCUELA DE CIENCIAS FÍSICAS Y MAT
 \begin{tabbing}
   SECRETARIO ACADÉMICOxs \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  \kill
 %  DIRECTOR \> decano en funciones al hacer privado \\
-  EXAMINADOR \> #3 \\
-  EXAMINADOR \> #4 \\
-  EXAMINADOR \> #5 \\
+  EXAMINADOR \> {#4} \\
+  EXAMINADOR \> {#5} \\
+  EXAMINADOR \> {#6} \\
 %  SECRETARIO ACADÉMICO \> secretario en funciones al hacer privado
 \end{tabbing}
 \par}
