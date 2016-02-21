@@ -59,10 +59,13 @@
 %\renewcommand{\thefigure}{\arabic{figure}}
 %\renewcommand{\thetable}{\Roman{table}}
 %DATOS DEL TRABAJO DE GRADUACIÓN
-\newcommand{\datosThesis}[6]{
 
 %Información en el fichero PDF ------------------------------------
-\hypersetup{pdftitle = {#2}, pdfkeywords = {#3}, pdfauthor = {#4}, pdfsubject = {}, pdfstartview = {FitH}, plainpages = {false}, bookmarksnumbered = {true}}
+\newcommand{\pdfdata}[4]{ \hypersetup{pdftitle = {#1}, pdfkeywords =
+{#2}, pdfauthor = {#3}, pdfsubject = {#4}, pdfstartview = {FitH},
+plainpages = {false}, bookmarksnumbered = {true}} }
+
+\newcommand{\datosThesis}[8]{
 
 \pdfbookmark[0]{PORTADA}{prt} 
 \thispagestyle{empty}
@@ -74,22 +77,22 @@
 \wd0 = 0pt \ht0 = 0pt \box0
 \end{figure} \hangindent = 18mm \hangafter = -3\vspace{-10mm}
 \noindent Universidad de San Carlos de Guatemala\\[5pt]
-Escuela de Ciencias Físicas y Matemáticas \\[5pt]
-Departamento de \ifthenelse{#1 = 1}{Física}{Matemática}
+{#1} \\[5pt]
+{#2}
 
 \vfill
 
 \begin{center}
-{\setlength{\baselineskip}{1.3\baselineskip} \large \textbf{\MakeTextUppercase{#2}}\par}
+{\setlength{\baselineskip}{1.3\baselineskip} \large \textbf{\MakeTextUppercase{#3}}\par}
 
 \vfill
 
-\textbf{#3}\\[6pt]
-Asesorado por {#4}  
+\textbf{#4}\\[6pt]
+Asesorado por {#5}  
 
 \vfill
 
-Guatemala, {#5}
+Guatemala, {#6}
 \end{center}
 \newpage
 
@@ -110,25 +113,25 @@ UNIVERSIDAD DE SAN CARLOS DE GUATEMALA
 \end{figure}
 
 \begin{center}
-\vspace{-7.5mm}ESCUELA DE CIENCIAS FÍSICAS Y MATEMÁTICAS
+\vspace{-7.5mm}{#1}
 
 \vfill
 
-\recuadro{\MakeTextUppercase{#2}}
+\recuadro{\MakeTextUppercase{#3}}
 \vfill
 
-TRABAJO DE GRADUACIÓN \\[3pt] PRESENTADO A LA JEFATURA DEL \\[3pt]
-DEPARTAMENTO DE \ifthenelse{#1 = 1}{FÍSICA}{MATEMÁTICA}\\[3pt] POR \\[1.15cm]
-\textbf{\MakeTextUppercase{#3}} \\[6pt]
-ASESORADO POR {\MakeTextUppercase{#4}} 
+TRABAJO DE GRADUACIÓN \\[3pt] PRESENTADO A JUNTA DIRECTIVA DE LA \\[3pt]
+\uppercase{{#1}}\\[3pt] POR \\[1.15cm]
+\textbf{\MakeTextUppercase{#4}} \\[6pt]
+ASESORADO POR {\MakeTextUppercase{#5}} 
 
 \vfill
 AL CONFERÍRSELE EL TÍTULO DE \\[6pt]
-\textbf{LICENCIAD\ifthenelse{#6 = 1}{A}{O} EN \ifthenelse{#1 = 1}{FÍSICA}{MATEMÁTICA} APLICADA}
+\textbf{INGENIER\ifthenelse{#7 = 1}{A}{O} EN {#8}}
 
 \vfill
 
-GUATEMALA, {\MakeTextUppercase{#5}}
+GUATEMALA, {\MakeTextUppercase{#6}}
 
 \end{center}
 
@@ -137,7 +140,7 @@ GUATEMALA, {\MakeTextUppercase{#5}}
 
 \thispagestyle{empty}
 \newpage
- }
+}
 
 \newcommand{\examenPrivado}[5]{%
 \pdfbookmark[1]{NÓMINA DEL CONSEJO DIRECTIVO}{ndj}
