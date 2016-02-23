@@ -25,24 +25,34 @@
 \newcommand{\pdfsubject}{Trabajo de graduación de licenciatura}
 \pdfdata{\pdftitle}{\pdfkeywords}{\pdfauthor}{\pdfsubject}
 %% Datos generales del trabajo de graduación
-\datosThesis{\facultad}{\escuela}{\tituloTesis}{\autor}{\asesor}{\fechaImpresion}{\generoAutor}{\carrera}
+\datosThesis{\facultad}{\escuela}{\tituloTesis}{\autor}{\asesor}{\fechaImpresion}
+{\generoAutor}{\carrera}
 
 % %% Datos generales del examen general privado
-\newcommand{\decano}{M.Sc. Edgar Anibal Cifuentes Anléu}%	% director ECFM
-\newcommand{\secretario}{Ing. José Rodolfo Samayoa Dardón}%		% secretario académico
-\newcommand{\examinadora}{Perengano}%		% examinador 1
-\newcommand{\examinadorb}{Zutano}%		% examinador 2
-\newcommand{\examinadorc}{Fulano 2}%		% examinador 3
+\newcommand{\decano}{M.Sc. Edgar Anibal Cifuentes Anléu}
+\newcommand{\secretario}{Ing. José Rodolfo Samayoa Dardón}
+\newcommand{\examinadora}{Perengano}
+\newcommand{\examinadorb}{Zutano}
+\newcommand{\examinadorc}{Fulano 2}
+\newcommand{\examinadorsec}{Secre 2}
 
-\examenPrivado{\facultad}{\decano}{\secretario}{\examinadora}{\examinadorb}{\examinadorc}
+\newcommand{\vocalI}{Vocal A}
+\newcommand{\vocalII}{Vocal B}
+\newcommand{\vocalIII}{Vocal C}
+\newcommand{\vocalIV}{Vocal D}
+\newcommand{\vocalV}{Vocal E}
+\newcommand{\secretarioac}{Secre Académico}
+
+\examenPrivadoA{\facultad}{\decano}{\vocalI}{\vocalII}{\vocalIII}{\vocalIV}{\vocalV}{\secretarioac}
+\examenPrivadoB{\examinadora}{\examinadorb}{\examinadorc}{\examinadorsec}
 
 {\onehalfspacing	% interlineado 1 1/2
 
  \OrdenImpresion{ordenImpresion}		% incluye orden de impresión, guardada en pdf
 
- \Agrade{agradecimientos}			% Agradecimientos
+ \Dedica{dedicatoria}
 
- \Dedica{dedicatoria}				% Dedicatoria
+ \Agrade{agradecimientos}			% Agradecimientos
 
  \par}
  
@@ -65,7 +75,7 @@
 
  \mainmatter     % --------------------------------------------------  Cuerpo del Trabajo de Graduación
 
-% \include{tch1}      % Cap. 1 
+ \include{ch1}      % Cap. 1 
 
 % %\include{tch2}      % Cap. 2 
 

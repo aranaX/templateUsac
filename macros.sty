@@ -142,8 +142,8 @@ GUATEMALA, {\MakeTextUppercase{#6}}
 \newpage
 }
 
-\newcommand{\examenPrivado}[6]{%
-\pdfbookmark[1]{NÓMINA DEL CONSEJO DIRECTIVO}{ndj}
+\newcommand{\examenPrivadoA}[8]{
+\pdfbookmark[1]{NÓMINA DE JUNTA DIRECTIVA}{ndj}
 \thispagestyle{empty}
 
 \begin{center}
@@ -158,34 +158,39 @@ UNIVERSIDAD DE SAN CARLOS DE GUATEMALA\\[6pt]
 \end{figure}
 
 \begin{center}
-\textbf{CONSEJO DIRECTIVO}
+\textbf{NÓMINA DE JUNTA DIRECTIVA}
 \end{center}
 
 {\doublespacing
 \begin{tabbing}
-  SECRETARIO ACADÉMICOxs \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  \kill
-  DIRECTOR \> {#2} \\
-%  VOCAL I \>  vocal-1\\
-%  VOCAL II \> vocal-2 \\
-%  VOCAL III \> vocal-3 \\
-%  VOCAL IV \> vocal-4 \\
-%  VOCAL V \> vocal-5 \\
-  SECRETARIO ACADÉMICO \> {#3}
+  SECRETARIOxs \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  \kill
+  DECANO \> {#2} \\
+  VOCAL I \>  {#3}\\
+  VOCAL II \> {#4} \\
+  VOCAL III \> {#5} \\
+  VOCAL IV \> {#6} \\
+  VOCAL V \> {#7} \\
+  SECRETARIO \> {#8}
 \end{tabbing}
+\par}
+}
+
+\newcommand{\examenPrivadoB}[5]{
+{\doublespacing
 
 \vspace{24pt}
 
 \begin{center}
 \textbf{TRIBUNAL QUE PRACTICÓ EL EXAMEN GENERAL PRIVADO}
 \end{center}
-
+%TODO PARAMETRIZAR GENERO DE EXAMINADORES O PENSAR UNA MEJOR ESTRATEGIA
 \begin{tabbing}
-  SECRETARIO ACADÉMICOxs \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  \kill
-%  DIRECTOR \> decano en funciones al hacer privado \\
+  SECRETARIOxs \= xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  \kill
+  DECANO \> {#1} \\
+  EXAMINADOR \> {#2} \\
+  EXAMINADOR \> {#3} \\
   EXAMINADOR \> {#4} \\
-  EXAMINADOR \> {#5} \\
-  EXAMINADOR \> {#6} \\
-%  SECRETARIO ACADÉMICO \> secretario en funciones al hacer privado
+  SECRETARIO \> {#5}
 \end{tabbing}
 \par}
 
